@@ -5,42 +5,88 @@ html {
 }
 
 body {
-	background-color: #001E2C;
-	height: 100%;
+	background: url('/images/cubes.png') repeat scroll center top #001E2C;
 	padding: 0;
 	margin: 0;
-}
-
-#wrapper {
-	min-height: 100%;
-	position: relative;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 header {
-	text-align: center;
+	height: 0px;
 }
 
-h1 {
-	font-size: 22px;
-	color: #E7E7E7;
+section.presentation {
+	height: 600px;
+	text-align: center;
+	padding-top	: 10px;
+	color: #4C616A;
+}
+
+section.presentation div.wrapper_text {
+	width: 650px;
+	margin: auto;
+	text-align: left;
+	position: relative;
+	top: 30%;
+}
+
+section.presentation div.wrapper_text h1 {
+	font-size: 60px;
+}
+
+section.presentation div.wrapper_text p {
+	font-size: x-large;
+}
+
+section.presentation div.wrapper_text p a {
+	color: inherit;
+	text-decoration: underline;
 }
 
 footer {
-	height: 60px;
+	height: 10%;
 	width: 100%;
-	position: absolute;
-	left: 0;
+	padding: 5px;
+	margin: auto;
+	position: fixed;
 	bottom: 0px;
-	/* TODO: just to see where footer goes
-	background-color: #FFF;*/
+	text-align: center;
 }
 
-.flex-center {
-    display: flex;
-    justify-content: center;
+footer div.copyright_info {
+	color: #003C58;
+	margin-top: 25px;
+	font-size: small;
 }
 
-img {
-	opacity: 0.3;
+div.social_icons_row a {
+	height: 50px;
+	width: 50px;
 	margin: 0px 50px 0px 50px;
+}
+
+div.social_icons_row a img {
+	opacity: 0.3;
+}
+
+.typed-cursor{
+	opacity: 1;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+@keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-moz-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
 }

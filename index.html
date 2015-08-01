@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!-- Meta -->
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<!-- Stylesheets -->
 		<link href="css/general.css" type="text/css" rel="stylesheet">
-		<title>AG personal page</title>		
+
+		<!-- Scripts -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/typed.js"></script>
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="favicon.png" type="image/png">
+
+		<!-- Title -->
+		<title>personal page</title>		
 	</head>
 	<body>		
-		<div id="wrapper">
-			<footer class="flex-center">
-				<a target="_blank" href="http://github.com/agarcao"><img src="/images/icons/github42.png" width="50" height="50"></a>
-				<a target="_blank" href="http://pt.linkedin.com/in/andregarcao"><img src="/images/icons/linkedin42.png" width="50" height="50"></a>
-				<a target="_blank" href="http://stackexchange.com/users/5877370/andr%C3%A9-gar%C3%A7%C3%A3o"><img src="/images/icons/stack-overflow42.png" width="50" height="50"></a>
-				<a target="_blank" href="http://twitter.com/andreg_08"><img src="/images/icons/twitter42.png" width="50" height="50"></a>
-			</footer>
-		</div>
+		<header>
+		</header>
+		<section class="presentation">
+			<div class="wrapper_text">
+				<!--<h1>Hey there, my name is André Garção</h1>
+				<p>My personal page is under construction but fell free to see my social presence and contact me via <a href="mailto:andre.garcao@tecnico.ulisboa.pt">email</a></p>-->
+			</div>
+		</section>
+		<footer>
+			<div class="social_icons_row">
+				<a target="_blank" href="http://github.com/agarcao" alt="Garção on github"><img src="/images/icons/github42.png" width="50" height="50"></a>
+				<a target="_blank" href="http://pt.linkedin.com/in/andregarcao" alt="Garção on Linkedin"><img src="/images/icons/linkedin42.png" width="50" height="50"></a>
+				<a target="_blank" href="http://stackexchange.com/users/5877370/andr%C3%A9-gar%C3%A7%C3%A3o" alt="Garção on StackOverflow"><img src="/images/icons/stack-overflow42.png" width="50" height="50"></a>
+				<a target="_blank" href="http://twitter.com/andreg_08" alt="Garção on Twitter"><img src="/images/icons/twitter42.png" width="50" height="50"></a>
+			</div>
+			<div class="copyright_info">
+				Copyright © 2015 by André Garção. All rights reserved.
+			</div>
+		</footer>		
 	</body>
+	<script>
+	  $(function(){
+	      $(".wrapper_text").typed({
+	        strings: ['<h1>Hey there, my name is André Garção</h1> <p>My personal page is under construction but feel free to see my social presence and contact me via <a href="mailto:andre.garcao@tecnico.ulisboa.pt">email</a></p>'],
+	        typeSpeed: 10,
+	        startDelay: 5000,
+	        showCursor: false
+	      });
+	  });
+	</script>
 </html>
