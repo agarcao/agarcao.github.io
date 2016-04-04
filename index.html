@@ -11,6 +11,7 @@
 		<!-- Scripts -->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="js/typed.js"></script>
+		<script src="js/github_services.js"></script>
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="favicon.png" type="image/png">
@@ -28,7 +29,13 @@
 			</ul>
 		</header>
 		<section class="presentation">
-			<div class="myimage"><img src="/images/meAvatar2.png" style="width:200px;"></div>
+			<div class="myimage">
+				<img class="avatar" src="/images/meAvatar2.png" style="width:200px;">
+				<div class="github_counter" style="position: absolute; top:140px; display: none;">
+					<img src="/images/icons/GitHub-Mark-Light-32px.png">
+					<span style="font-size: smaller; color: #003C58; margin-left: -2px;"><span class="counter">0</span> commits</span>
+				</div>
+			</div>			
 			<div class="wrapper_text">
 				<!--<h1>Hey there, my name is André Garção</h1>
 				<p>My personal page is under construction but fell free to see my social presence and contact me via <a href="mailto:andre.garcao@tecnico.ulisboa.pt">email</a></p>-->
@@ -198,7 +205,7 @@
 	<script>
 	  $(function(){
 	      $(".wrapper_text").typed({
-	        strings: ["<h1>Hey there, my name is André Garção</h1> <p>I'm a portuguese web-developer currently studying and working in Lisbon. Welcome to my personal space on the web where I've my résumé and, in the future, my blog  :)"],
+	        strings: ["<h1>Hey there, my name is André Garção</h1> <p>I'm a portuguese software engineer currently studying and working in Lisbon. Welcome to my personal space on the web where I've my résumé and, in the future, my blog  :)"],
 	        typeSpeed: 5,
 	        startDelay: 5000,
 	        showCursor: false
@@ -213,5 +220,23 @@
 
 	  ga('create', 'UA-70754370-1', 'auto');
 	  ga('send', 'pageview');
+
+		// Github Commit Counter
+		//jQuery.ready(counterGitHubCommits());
+		var counter = 0;
+
+	  	jQuery(document).ready(
+	  		function(){
+		  		jQuery(".github_counter").css("left", ((jQuery(".myimage").width() - jQuery(".avatar").width()) / 2) + 175 + "px");
+
+				// Github Commit Counter				
+				counter = counterGitHubCommits();
+		  		if(counter != 0)
+		  		{
+		  			jQuery(".counter").html(counter);
+		  			jQuery(".github_counter").show(1000);
+		  		}
+	  		}
+  		);
 	</script>
 </html>
