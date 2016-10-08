@@ -36,7 +36,12 @@
 						<img src="/images/icons/GitHub-Mark-Light-32px.png">
 						<span style="font-size: smaller; color: #003C58; margin-left: -2px;"><span class="counter">0</span> commits</span>
 					</div>
-				</a>
+				</a>				
+				<div class="gitlab_counter" style="position: absolute; top:180px; display: none;">
+					<img src="/images/icons/GitLab-Commit-Icon.png" height="32px">
+					<span style="font-size: smaller; color: #003C58; margin-left: -2px;">243 commits</span>
+				</div>
+				
 			</div>			
 			<div class="wrapper_text">
 				<!--<h1>Hey there, my name is André Garção</h1>
@@ -239,6 +244,9 @@
 		  			jQuery(".counter").html(counter);
 		  			jQuery(".github_counter").show(1000);
 		  		}
+
+		  		jQuery(".gitlab_counter").css("left", ((jQuery(".myimage").width() - jQuery(".avatar").width()) / 2) + 143 + "px");
+		  		jQuery(".gitlab_counter").show(1000);
 	  		}
   		);
 	</script>
