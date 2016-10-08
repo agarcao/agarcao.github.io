@@ -232,7 +232,7 @@ div.social_icons_row a img {
 
 .styled meter {
   /* Reset the default appearance */
-  -webkit-appearance: none;
+  -webkit-appearance: meter;
   -moz-appearance: none;
   appearance: none;
 
