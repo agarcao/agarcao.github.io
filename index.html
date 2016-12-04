@@ -32,14 +32,18 @@
 			<div class="myimage">
 				<img class="avatar" src="/images/meAvatar2.png" style="width:200px;">
 				<a href="http://github.com/agarcao">
-					<div class="github_counter" style="position: absolute; top:140px; display: none;">
+					<div class="github_counter" style="position: absolute; top:100px; display: none;">
 						<img src="/images/icons/GitHub-Mark-Light-32px.png">
 						<span style="font-size: smaller; color: #003C58; margin-left: -2px;"><span class="counter">0</span> commits</span>
 					</div>
 				</a>				
-				<div class="gitlab_counter" style="position: absolute; top:180px; display: none;">
+				<div class="gitlab_counter" style="position: absolute; top:145px; display: none;">
 					<img src="/images/icons/GitLab-Commit-Icon.png" height="32px">
-					<span style="font-size: smaller; color: #003C58; margin-left: -2px;">243 commits</span>
+					<span style="font-size: smaller; color: #003C58; margin-left: -2px;">249 commits</span>
+				</div>
+				<div class="bitbucket_counter" style="position: absolute; top:180px; display: none;">
+					<img src="/images/icons/BitBucket-Commit-Icon.png" height="32px">
+					<span style="font-size: smaller; color: #003C58; margin-left: -2px;">9 commits</span>
 				</div>
 				
 			</div>			
@@ -57,7 +61,13 @@
 						<h6 class="date">Feb 2014 - Now</h6>
 					</div>
 					<div class="description_collumn">
-						<h5 class="position"><strong>Software Engineer - Full Stack Web-Development</strong></h5>
+						<h5 class="position">
+							<strong>Software Engineer - Full Stack Web-Development</strong>
+							<!--
+							<img src="images/icons/icon-certified.png" height="20px" style="position: relative; top: 5px;">
+							<img src="images/icons/icon-certified.png" height="20px" style="position: relative; top: 5px;">
+							-->
+						</h5>
 						<span>Premium Minds is a software house of medium size in the centre of the Portuguese capital: Lisbon. I currently work here, in full-time regime, as software engineer. <br /><br />
 						I divide my time here between two projects. The main one and, as expected, the one that consumes me more time is more like a set of initiatives that we have with the company <a target="_blank" href="https://globenet.net/en/" style="color: inherit;">GlobeNet</a>. In this project, we work mainly with the SalesForce tech stack, Scala and ScalaJS.<br /><br />
 						The other project is an creative day project (one day per month, all colaborators stop they usual work and, instead, work on something else). The idea is to build a solution that solve the company's problem with the car scheduling and reservation. We are doing this using the MEAN Stack (MongoDB, Express, AngularJS and NodeJS) and some python.<br /><br />
@@ -83,7 +93,13 @@
 						<h6 class="date">Jun 2013 - Set 2013</h6>
 					</div>
 					<div class="description_collumn">
-						<h5 class="position"><strong>Trainer - Web-Development</strong></h5>
+						<h5 class="position">
+							<strong>Trainer - Web-Development</strong>
+							<!--
+							<img src="images/icons/icon-certified.png" height="20px" style="position: relative; top: 5px;">
+							<img src="images/icons/icon-certified.png" height="20px" style="position: relative; top: 5px;">
+							-->
+						</h5>
 						<span>In our degree at IST, we don't have any internship but I felt like I need to try the business world. Because of that, I decided to do, in the summer of '13, my first internship. There I became more familiarized with PHP and with the MVC pattern. I worked with the CodeIgniter framework and I also have done some frontend developments. <br /><br />
 						Linkcities is a platform for collaborative multi-channel designed specifically for professionals in the local administration, that enables the production and sharing of knowledge between professionals and cities around the World.</span>
 						<div class="location"><img src="images/icons/location_icon.png"><span style="position: relative; left: 7px; top: -3px;">Lisbon, Portugal</span></div>
@@ -235,7 +251,7 @@
 
 	  	jQuery(document).ready(
 	  		function(){
-		  		jQuery(".github_counter").css("left", ((jQuery(".myimage").width() - jQuery(".avatar").width()) / 2) + 175 + "px");
+		  		jQuery(".github_counter").css("left", ((jQuery(".myimage").width() - jQuery(".avatar").width()) / 2) + 187 + "px");
 
 				// Github Commit Counter				
 				counter = counterGitHubCommits();
@@ -245,8 +261,11 @@
 		  			jQuery(".github_counter").show(1000);
 		  		}
 
-		  		jQuery(".gitlab_counter").css("left", ((jQuery(".myimage").width() - jQuery(".avatar").width()) / 2) + 143 + "px");
+		  		jQuery(".gitlab_counter").css("left", ((jQuery(".myimage").width() - jQuery(".avatar").width()) / 2) + 175 + "px");
 		  		jQuery(".gitlab_counter").show(1000);
+
+		  		jQuery(".bitbucket_counter").css("left", ((jQuery(".myimage").width() - jQuery(".avatar").width()) / 2) + 143 + "px");
+		  		jQuery(".bitbucket_counter").show(1000);
 	  		}
   		);
 	</script>
